@@ -1,4 +1,5 @@
 FROM nginx:latest
+LABEL mainteiner="frostdimonlex@gmail.com"
 WORKDIR usr/share/nginx/html
 ENV NAME=DIMA
 ENV AGE=27
