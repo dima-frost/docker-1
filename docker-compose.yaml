@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  alpineForgit:
+    build: alpine/
+    image: alpineforgit:1.0
+    command: git clone https://github.com/dima-frost/test
+
+    volumes:
+      - "/home/user/gitrepo:/gitRep"
+
+  customNginx:
+    build: nginx/
+    image: customnginx:1.0
+    ports:
+      - 8080:80
+    environment:
+      NAME: Dmytro
+      AGE: 28
+ #   args:
+ #     NAME: Dmytro
+#      AGE: 28
